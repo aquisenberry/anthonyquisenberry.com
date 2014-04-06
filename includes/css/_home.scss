@@ -1,31 +1,62 @@
 @import url(http://fonts.googleapis.com/css?family=Pacifico|Satisfy);
 
-$lengthOfSpan: 300px;
-$fontSize: $lengthOfSpan/3;
+
 $page-width: 80%;
+$lengthOfSpan:200px;
+$fontSize: $lengthOfSpan/4;
 
 *
 {
   box-sizing:border-box;
 }
-body
-{
-  background: $wool;
-}
-.wrapper
-{
-//border: 20px solid white;
-width: $page-width;
-margin: 0 auto;
-}
-header
-{
-  margin: auto auto 0px auto;
-  background: $plasterWall;
-  border-radius: 20px 20px 0  0;
+body{
+  @include breakpoint(papa-bear) {
+    background: $wool;
+      }
+      @include breakpoint(mama-bear) {background: $wool;
+    }
+    @include breakpoint(baby-bear) {
+    
+    margin: 0;
+    padding-left: 0;
+  background: $wool;}
+  }
+    .wrapper{
+      width: $page-width;
+      min-width:370px;
+      @include breakpoint(papa-bear) {
+        margin: 0 10%;}
+      @include breakpoint(mama-bear) {
+  
+  margin: 0 10%;}
+  @include breakpoint(baby-bear) {
+    
+   
+    margin: 0 auto;
+    padding-left: 0;}}
+    header{
+      @include breakpoint(papa-bear) {
+      
+      background:green;
+      margin: 0 auto;
+      display:table;
+    }
+    @include breakpoint(mama-bear) {
+    
+    background:white;
+    margin: 0 auto;
+    display:table;
+  }
+  @include breakpoint(baby-bear) {
+    
+    background:blue;
+    margin: 0 auto;
+    padding-left: 0;
+    display:block;}
+  
+  border-radius: 20px 20px 0 0;
   border-bottom: 3px solid darken($plasterWall, 8%);
   width: 100%;
-  display:table;
 }
 .top
 {
@@ -39,41 +70,43 @@ header
 .bottom,.top
 {
   font-family: 'Satisfy', cursive;
-//font-variant: small-caps;
-display: table-cell;
-padding: 4%;
-font-size: $fontSize/2;
-color: darken($oliveTurtleneck, 5%);
+  //font-variant: small-caps;
+  display: table-cell;
+  padding: 4%;
+  font-size: $fontSize/2;
+  color: darken($oliveTurtleneck, 5%);
 }
 .logo{
-//font-variant: small-caps;
-//border:1px solid darken(tan, 0%);
-//padding: (($lengthOfSpan/2)-($fontSize/2)) (($lengthOfSpan/2)-(($fontSize/2))) ;
-font-size: $fontSize;
-font-family: Pacifico;
-background: $wool;
-color: darken($plasterWall,0%);
-margin: 50px auto;
-display: table;
-width: $lengthOfSpan;
-height: $lengthOfSpan;
+  //font-variant: small-caps;
+  //border:1px solid darken(tan, 0%);
+  //padding: (($lengthOfSpan/2)-($fontSize/2)) (($lengthOfSpan/2)-(($fontSize/2))) ;
+  font-size: $fontSize;
+  font-family: Pacifico;
+  background: $wool;
 
-border-radius: $lengthOfSpan ;
+  margin: 50px auto;
+  display: table;
+  width: $lengthOfSpan;
+  height: $lengthOfSpan;
 
-span{
-//line-height: $lineAdjustment;
-vertical-align: middle;
-text-align:right;
-padding: 26% 18% 0 0;
-//position: relative;
-//background:red;
-display:table-cell;
-// margin: auto;
-}
+  border-radius: $lengthOfSpan ;
+
+  a{
+    //line-height: $lineAdjustment;
+    vertical-align: middle;
+    text-align:right;
+    padding: 26% 18% 0 0;
+    //position: relative;
+    //background:red;
+    display:table-cell;
+    text-decoration: none;
+    color: darken($plasterWall,0%);
+    // margin: auto;
+  }
 }
 nav.fastLinks
 {
-  margin: 0 20% 2% 20%;
+  margin: 0 15% 1% 15%;
   display: block;
   background: darken($plasterWall, 5%);
   padding:1% 0;
@@ -81,11 +114,12 @@ nav.fastLinks
   ul
   {
     margin: 0px;
-
   }
   li
   {
-    width: 33%;
+
+    padding: 0;
+    width: 30%;
     display: inline-block;
     list-style-type: none;
     text-align: center;
@@ -93,25 +127,25 @@ nav.fastLinks
   a
   {
     font-family: 'Satisfy', cursive;
-//font-variant: small-caps;
-font-size: $fontSize/4;
-color:darken($oliveTurtleneck, 5%);
-margin: 0;
-text-decoration: none;
-padding: 2% 4%;
-//border: 4px solid red;
+    //font-variant: small-caps;
+    font-size: $fontSize/4;
+    color:darken($oliveTurtleneck, 5%);
+    margin: 0;
+    text-decoration: none;
+    padding: 2% 4%;
+    //border: 4px solid red;
 
-&:hover
-{
-  background: darken($plasterWall, 8%);
-}
-&:active
-{
-  color: darken($wool, 10%);
+    &:hover
+    {
+      background: darken($plasterWall, 8%);
+    }
+    &:active
+    {
+      color: darken($wool, 10%);
 
-}
+    }
 
-}
+  }
 }
 .content
 {
@@ -127,7 +161,7 @@ padding: 2% 4%;
   ul
   {
     //border: 2px solid blue;
-    margin: 0 auto;
+    margin: 0 1%;
     padding:0px;
     width: intrinsic;
     text-align: center;
@@ -140,7 +174,7 @@ padding: 2% 4%;
     display: inline-block;
     list-style-type: none;
     text-align: center;
-    font-size: 100px;
+    font-size: $fontSize;
     color: darken($plasterWall,5%);
     a
     {
@@ -149,8 +183,12 @@ padding: 2% 4%;
       &:hover
       {
         color: lighten($plasterWall, 0%);
-
       }
     }
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
   }
 }

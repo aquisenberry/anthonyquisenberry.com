@@ -25,12 +25,12 @@
     }
   }
   @else if $point == mama-bear {
-    @media (min-width: 731px) and (max-width: 1024px) { 
+    @media (min-width: 685px) and (max-width: 1024px) { 
       @content; 
     }
   }
   @else if $point == baby-bear {
-    @media (min-width: 320px) and (max-width: 730px)  { 
+    @media (min-width: 228px) and (max-width: 684px)  { 
       @content; 
     }
   }
