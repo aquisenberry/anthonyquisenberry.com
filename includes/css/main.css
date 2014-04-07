@@ -208,23 +208,21 @@
       padding-left: 0; } }
 
 header {
+  background: #b99555;
   border-radius: 20px 20px 0 0;
   border-bottom: 3px solid #a28043;
   width: 100%; }
   @media (min-width: 1025px) {
     header {
-      background: green;
       margin: 0 auto;
       display: table; } }
   @media (min-width: 685px) and (max-width: 1024px) {
     header {
-      background: white;
       margin: 0 auto;
       display: table; } }
   @media (min-width: 228px) and (max-width: 684px) {
     header {
-      background: blue;
-      margin: 0 auto;
+      margin: 25px auto 0;
       padding-left: 0;
       display: block; } }
 
@@ -235,29 +233,67 @@ header {
   vertical-align: bottom;
   text-align: right; }
 
-.bottom, .top {
-  font-family: 'Satisfy', cursive;
-  display: table-cell;
-  padding: 4%;
-  font-size: 25px;
-  color: #5a5c3c; }
-
-.logo {
-  font-size: 50px;
-  font-family: Pacifico;
-  background: #a8462d;
-  margin: 50px auto;
-  display: table;
-  width: 200px;
-  height: 200px;
-  border-radius: 200px; }
-  .logo a {
-    vertical-align: middle;
-    text-align: right;
-    padding: 26% 18% 0 0;
+@media (min-width: 1025px) {
+  .bottom, .top {
+    font-family: 'Satisfy', cursive;
     display: table-cell;
-    text-decoration: none;
-    color: #b99555; }
+    padding: 4%;
+    font-size: 25px;
+    color: #5a5c3c; } }
+@media (min-width: 685px) and (max-width: 1024px) {
+  .bottom, .top {
+    font-family: 'Satisfy', cursive;
+    display: table-cell;
+    padding: 4%;
+    font-size: 25px;
+    color: #5a5c3c; } }
+@media (min-width: 228px) and (max-width: 684px) {
+  .bottom, .top {
+    font-family: 'Satisfy', cursive;
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding: 4%;
+    font-size: 25px;
+    color: #5a5c3c; } }
+
+@media (min-width: 1025px) {
+  .logo {
+    font-size: 50px;
+    font-family: Pacifico;
+    background: #a8462d;
+    margin: 50px auto;
+    display: table;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px; } }
+@media (min-width: 685px) and (max-width: 1024px) {
+  .logo {
+    font-size: 50px;
+    font-family: Pacifico;
+    background: #a8462d;
+    margin: 50px auto;
+    display: table;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px; } }
+@media (min-width: 228px) and (max-width: 684px) {
+  .logo {
+    font-size: 50px;
+    font-family: Pacifico;
+    background: #a8462d;
+    margin: 0 auto;
+    display: table;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px; } }
+.logo a {
+  vertical-align: middle;
+  text-align: right;
+  padding: 26% 18% 0 0;
+  display: table-cell;
+  text-decoration: none;
+  color: #b99555; }
 
 nav.fastLinks {
   margin: 0 15% 1% 15%;
@@ -292,6 +328,18 @@ nav.fastLinks {
 .socmed-container {
   width: 100%;
   margin: 0 auto; }
+  @media (min-width: 1025px) {
+    .socmed-container.below {
+      display: none; } }
+  @media (min-width: 685px) and (max-width: 1024px) {
+    .socmed-container.below {
+      display: none; } }
+  @media (min-width: 228px) and (max-width: 684px) {
+    .socmed-container.below {
+      margin: 0 auto !important; } }
+  @media (min-width: 228px) and (max-width: 684px) {
+    .socmed-container.above {
+      display: none; } }
   .socmed-container ul {
     margin: 0 1%;
     padding: 0px;
